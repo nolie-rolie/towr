@@ -155,6 +155,107 @@ Visualization Manager:
       Update Interval: 0
       Value: false
       Visual Enabled: true
+
+
+    - Alpha: 0.5
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: false
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        body:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: false
+        LF_FOOT:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        abduct_fl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shank_fl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thigh_fl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LH_FOOT:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        abduct_hl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shank_hl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thigh_hl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RF_FOOT:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        abduct_fr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shank_fr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thigh_fr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RH_FOOT:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        abduct_hr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shank_hr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thigh_hr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: Mini Cheetah
+      Robot Description: /mini_cheetah_rviz_urdf_robot_description
+      TF Prefix: mini_cheetah_des
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+
+
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255
