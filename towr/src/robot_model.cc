@@ -50,25 +50,23 @@ RobotModel::RobotModel(Robot robot)
       kinematic_model_ = std::make_shared<BipedKinematicModel>();
       break;
     case Hyq:
-      dynamic_model_ = std::make_shared<MiniCheetahDynamicModel>();
-      kinematic_model_= std::make_shared<MiniCheetahKinematicModel>();
-      break;
-      //dynamic_model_   = std::make_shared<HyqDynamicModel>();
-      //kinematic_model_ = std::make_shared<HyqKinematicModel>();
+      //dynamic_model_ = std::make_shared<MiniCheetahDynamicModel>();
+      //kinematic_model_= std::make_shared<MiniCheetahKinematicModel>();
+      dynamic_model_   = std::make_shared<HyqDynamicModel>();
+      kinematic_model_ = std::make_shared<HyqKinematicModel>();
       break;
     case Anymal:
       dynamic_model_   = std::make_shared<AnymalDynamicModel>();
       kinematic_model_ = std::make_shared<AnymalKinematicModel>();
       break;
     case MiniCheetah:
-      //dynamic_model_ = std::make_shared<MiniCheetahDynamicModel>();
-      //kinematic_model_= std::make_shared<MiniCheetahKinematicModel>();
-      //break;
+      dynamic_model_ = std::make_shared<MiniCheetahDynamicModel>();
+      kinematic_model_= std::make_shared<MiniCheetahKinematicModel>();
+      break;
     default:
       assert(false); // Error: Robot model not implemented.
       break;
   }
 }
-
 
 } // namespace towr

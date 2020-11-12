@@ -60,6 +60,7 @@ namespace towr {
  *
  * @ingroup Robots
  */
+
 struct RobotModel {
   /**
    * @brief Robots for which kinematic and dynamic models are implemented.

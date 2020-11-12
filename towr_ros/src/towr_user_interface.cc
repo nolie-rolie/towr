@@ -37,7 +37,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <towr_ros/topic_names.h>
 #include <towr/terrain/height_map.h>
 #include <towr/initialization/gait_generator.h>
-#include <towr/models/robot_model.h>
+#include <towr/models/new_robot_model.h>
 
 
 namespace towr {
@@ -67,7 +67,7 @@ TowrUserInterface::TowrUserInterface ()
   goal_geom_.lin.p_ << 2.1, 0.0, 0.0;
   goal_geom_.ang.p_ << 0.0, 0.0, 0.0; // roll, pitch, yaw angle applied Z->Y'->X''
 
-  robot_      = RobotModel::Monoped;
+  robot_      = NewRobotModel::Monoped;
   terrain_    = HeightMap::FlatID;
   gait_combo_ = GaitGenerator::C0;
   total_duration_ = 2.4;
@@ -147,7 +147,7 @@ TowrUserInterface::PrintScreen() const
   wmove(stdscr, ROBOT, X_DESCRIPTION);
   printw("Robot");
   wmove(stdscr, ROBOT, X_VALUE);
-  printw("%s\n", robot_names.at(static_cast<RobotModel::Robot>(robot_)).c_str());
+  printw("%s\n", robot_names.at(static_cast<NewRobotModel::Robot>(robot_)).c_str());
 
   wmove(stdscr, GAIT, X_KEY);
   printw("g");
@@ -241,7 +241,7 @@ TowrUserInterface::CallbackKey (int c)
       break;
 
     case 'r':
-      robot_ = AdvanceCircularBuffer(robot_, RobotModel::ROBOT_COUNT);
+      robot_ = AdvanceCircularBuffer(robot_, NewRobotModel::ROBOT_COUNT);
       break;
 
     // duration
